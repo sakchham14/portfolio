@@ -16,6 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Update portfolio details
+
+Edit [`portfolio-details.json`](./portfolio-details.json) to update the profile, skills, and project entries shown on the site. Keep the JSON syntax valid; skill levels should be numbers from 1 to 5, and project entries should retain their existing fields. The site reads this file through `src/data/content.ts`.
+
+For local development, save the file and let the dev server reload. To publish edits with Docker Compose, run `docker compose up -d --build` from this project directory.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

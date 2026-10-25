@@ -1,0 +1,169 @@
+{
+  "skills": {
+    "full-stack": [
+      {
+        "name": "React",
+        "level": 5,
+        "description": "Modern web interfaces with hooks, context, and state management",
+        "icon": "Rectangle"
+      },
+      {
+        "name": "Node.js",
+        "level": 4,
+        "description": "Backend services, APIs, and real-time applications",
+        "icon": "Server"
+      },
+      {
+        "name": "TypeScript",
+        "level": 5,
+        "description": "Typed JavaScript for scalable applications",
+        "icon": "Code"
+      },
+      {
+        "name": "Tailwind CSS",
+        "level": 4,
+        "description": "Utility-first styling with responsive design",
+        "icon": "Palette"
+      },
+      {
+        "name": "Framer Motion",
+        "level": 4,
+        "description": "Smooth animations and layout transitions",
+        "icon": "Sparkles"
+      },
+      {
+        "name": "Next.js",
+        "level": 4,
+        "description": "Full-stack React framework with App Router",
+        "icon": "Zap"
+      }
+    ],
+    "system-admin": [
+      {
+        "name": "Linux",
+        "level": 5,
+        "description": "System administration, scripting, and service management",
+        "icon": "Terminal"
+      },
+      {
+        "name": "Docker",
+        "level": 4,
+        "description": "Containerization and orchestration",
+        "icon": "Container"
+      },
+      {
+        "name": "NGINX",
+        "level": 4,
+        "description": "Reverse proxy, load balancing, and web serving",
+        "icon": "Map"
+      },
+      {
+        "name": "Self-hosted services",
+        "level": 5,
+        "description": "Home lab, monitoring, and utility applications",
+        "icon": "Zap"
+      },
+      {
+        "name": "Bash/Python scripting",
+        "level": 5,
+        "description": "automation and system utilities",
+        "icon": "Branch"
+      },
+      {
+        "name": "Network configuration",
+        "level": 4,
+        "description": "Virtual networks and infrastructure",
+        "icon": "Link"
+      }
+    ],
+    "automation": [
+      {
+        "name": "Infrastructure scripts",
+        "level": 5,
+        "description": "Automation of deployment and management tasks",
+        "icon": "Code"
+      },
+      {
+        "name": "CI/CD pipelines",
+        "level": 4,
+        "description": "GitHub Actions and automated testing",
+        "icon": "Zap"
+      },
+      {
+        "name": "Ansible/Terraform",
+        "level": 4,
+        "description": "IaC for infrastructure provisioning",
+        "icon": "Layout"
+      },
+      {
+        "name": "Network automation",
+        "level": 4,
+        "description": "Scripts for network management and monitoring",
+        "icon": "ArrowPath"
+      },
+      {
+        "name": "Bash/Zsh",
+        "level": 5,
+        "description": "Shell scripting for task automation",
+        "icon": "Zap"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Network Automation Toolkit",
+      "description": "Automation scripts for network device management",
+      "longDescription": "A comprehensive toolkit for automating Cisco and Arista network device configuration, monitoring, and health checks using Python and Netmiko.",
+      "tags": ["Python", "Netmiko", "Network Automation", "SSH"],
+      "image": "/projects/network-toolkit.jpg",
+      "githubUrl": "https://github.com/sakchham/network-automation",
+      "demoUrl": "https://github.com/sakchham/network-automation",
+      "techStack": ["Python", "Netmiko", "NAPALM", "Git"]
+    },
+    {
+      "id": "2",
+      "title": "Self-Hosted Dashboard",
+      "description": "Personal dashboard for monitoring self-hosted services",
+      "longDescription": "Built with Next.js and Tailwind CSS, this dashboard monitors Docker containers, service health, and system metrics via a beautiful glass-morphism interface.",
+      "tags": ["Next.js", "Tailwind", "Docker", "Monitoring"],
+      "image": "/projects/dashboard.jpg",
+      "githubUrl": "https://github.com/sakchham/self-hosted-dashboard",
+      "demoUrl": "https://github.com/sakchham/self-hosted-dashboard",
+      "techStack": ["Next.js", "Tailwind CSS", "Docker", "Prometheus"]
+    },
+    {
+      "id": "3",
+      "title": "Real-time Chat Application",
+      "description": "Full-stack chat app with WebSocket-based messaging",
+      "longDescription": "A modern real-time chat application built with React, Node.js, and WebSockets, featuring user authentication, rooms, and message history.",
+      "tags": ["React", "Node.js", "WebSockets", "Authentication"],
+      "image": "/projects/chat-app.jpg",
+      "githubUrl": "https://github.com/sakchham/chat-app",
+      "demoUrl": "https://github.com/sakchham/chat-app",
+      "techStack": ["React", "Node.js", "Socket.io", "TypeScript"]
+    },
+    {
+      "id": "4",
+      "title": "Infrastructure Automation Scripts",
+      "description": "Batch automation for server provisioning and configuration",
+      "longDescription": "Collection of Ansible playbooks and Bash scripts for automated server deployment, software installation, and system configuration across homogeneous environments.",
+      "tags": ["Ansible", "Bash", "Automation", "CI/CD"],
+      "image": "/projects/scripts.jpg",
+      "githubUrl": "https://github.com/sakchham/infra-scripts",
+      "demoUrl": "https://github.com/sakchham/infra-scripts",
+      "techStack": ["Ansible", "Bash", "Terraform", "GitHub Actions"]
+    }
+  ],
+  "about": {
+    "name": "Sakchham Maharjan",
+    "title": "Full-Stack Developer & Systems/Network Engineer",
+    "subtitle": "CSIT Student passionate about cloud infrastructure, self-hosted services, dynamic full-stack applications, and network automation",
+    "description": "I'm a CSIT (Computer Science & Information Technology) student with a strong foundation in full-stack web development, system architecture, Linux administration, and infrastructure automation. I specialize in building scalable web applications and managing complex system environments. My journey combines modern web technologies with practical system administration experience, from self-hosted services to dynamic full-stack platforms.",
+    "location": "Kathmandu, Nepal",
+    "email": "sakchham@example.com",
+    "linkedin": "https://linkedin.com/in/sakchham-maharjan",
+    "github": "https://github.com/sakchham",
+    "twitter": "https://twitter.com/sakchhamdev"
+  }
+}
