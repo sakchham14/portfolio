@@ -36,7 +36,7 @@ export const FloatingNav = () => {
         </div>
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/sakchham"
+            href="https://github.com/sakchham14"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2.5 rounded-full glass glass-hover text-slate-200 hover:text-white flex items-center justify-center"
