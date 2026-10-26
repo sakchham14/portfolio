@@ -115,44 +115,105 @@
       "title": "Network Automation Toolkit",
       "description": "Automation scripts for network device management",
       "longDescription": "A comprehensive toolkit for automating Cisco and Arista network device configuration, monitoring, and health checks using Python and Netmiko.",
-      "tags": ["Python", "Netmiko", "Network Automation", "SSH"],
+      "tags": [
+        "Python",
+        "Netmiko",
+        "Network Automation",
+        "SSH"
+      ],
       "image": "/projects/network-toolkit.jpg",
       "githubUrl": "https://github.com/sakchham/network-automation",
       "demoUrl": "https://github.com/sakchham/network-automation",
-      "techStack": ["Python", "Netmiko", "NAPALM", "Git"]
+      "techStack": [
+        "Python",
+        "Netmiko",
+        "NAPALM",
+        "Git"
+      ]
     },
     {
       "id": "2",
       "title": "Self-Hosted Dashboard",
       "description": "Personal dashboard for monitoring self-hosted services",
       "longDescription": "Built with Next.js and Tailwind CSS, this dashboard monitors Docker containers, service health, and system metrics via a beautiful glass-morphism interface.",
-      "tags": ["Next.js", "Tailwind", "Docker", "Monitoring"],
+      "tags": [
+        "Next.js",
+        "Tailwind",
+        "Docker",
+        "Monitoring"
+      ],
       "image": "/projects/dashboard.jpg",
       "githubUrl": "https://github.com/sakchham/self-hosted-dashboard",
       "demoUrl": "https://github.com/sakchham/self-hosted-dashboard",
-      "techStack": ["Next.js", "Tailwind CSS", "Docker", "Prometheus"]
+      "techStack": [
+        "Next.js",
+        "Tailwind CSS",
+        "Docker",
+        "Prometheus"
+      ]
     },
     {
       "id": "3",
       "title": "Real-time Chat Application",
       "description": "Full-stack chat app with WebSocket-based messaging",
       "longDescription": "A modern real-time chat application built with React, Node.js, and WebSockets, featuring user authentication, rooms, and message history.",
-      "tags": ["React", "Node.js", "WebSockets", "Authentication"],
+      "tags": [
+        "React",
+        "Node.js",
+        "WebSockets",
+        "Authentication"
+      ],
       "image": "/projects/chat-app.jpg",
       "githubUrl": "https://github.com/sakchham/chat-app",
       "demoUrl": "https://github.com/sakchham/chat-app",
-      "techStack": ["React", "Node.js", "Socket.io", "TypeScript"]
+      "techStack": [
+        "React",
+        "Node.js",
+        "Socket.io",
+        "TypeScript"
+      ]
     },
     {
       "id": "4",
       "title": "Infrastructure Automation Scripts",
       "description": "Batch automation for server provisioning and configuration",
       "longDescription": "Collection of Ansible playbooks and Bash scripts for automated server deployment, software installation, and system configuration across homogeneous environments.",
-      "tags": ["Ansible", "Bash", "Automation", "CI/CD"],
+      "tags": [
+        "Ansible",
+        "Bash",
+        "Automation",
+        "CI/CD"
+      ],
       "image": "/projects/scripts.jpg",
       "githubUrl": "https://github.com/sakchham/infra-scripts",
       "demoUrl": "https://github.com/sakchham/infra-scripts",
-      "techStack": ["Ansible", "Bash", "Terraform", "GitHub Actions"]
+      "techStack": [
+        "Ansible",
+        "Bash",
+        "Terraform",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Real-time Multiplayer Ludo",
+      "description": "Cross-device Ludo game with Single Player (AI) and Multiplayer support",
+      "longDescription": "A lightweight, high-performance Ludo game built with vanilla JS and Node.js WebSockets. Supports real-time multiplayer across any device and includes a smart AI for single-player mode. Dockerized for seamless VPS deployment.",
+      "tags": [
+        "Node.js",
+        "WebSockets",
+        "Docker",
+        "Game Dev"
+      ],
+      "image": "/projects/ludo.jpg",
+      "githubUrl": "https://github.com/sakchham14/ludo-multiplayer",
+      "demoUrl": "http://your-vps-ip:3000",
+      "techStack": [
+        "Node.js",
+        "WebSocket",
+        "JavaScript",
+        "Docker"
+      ]
     }
   ],
   "about": {

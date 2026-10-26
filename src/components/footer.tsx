@@ -19,7 +19,7 @@ export const Footer = () => {
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:scale-[1.02] transition-transform relative z-10"
           >
             <Mail className="h-4 w-4" />
-            <span>sakchham@example.com</span>
+            <span>{ABOUT_CONTENT.email}</span>
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
