@@ -1,0 +1,255 @@
+.game-panel {
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(180deg, rgba(13, 23, 39, 0.92), rgba(9, 14, 24, 0.95));
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.5);
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.game-screen {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: min(52vw, 360px);
+  min-height: 260px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(180deg, #b7e7ff 0%, #dff7ff 42%, #f4fafc 100%);
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.sun {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff8c4 0%, #ffd76a 42%, #f4b942 100%);
+  box-shadow: 0 0 30px rgba(255, 201, 89, 0.7);
+}
+
+.cloud {
+  position: absolute;
+  width: 80px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 30px 10px 0 8px rgba(255, 255, 255, 0.82), 70px 2px 0 0 rgba(255, 255, 255, 0.82);
+}
+
+.cloud-one {
+  top: 60px;
+  left: 140px;
+}
+
+.cloud-two {
+  top: 110px;
+  left: 470px;
+  transform: scale(0.9);
+}
+
+.dino {
+  position: absolute;
+  left: 64px;
+  width: 42px;
+  height: 44px;
+  border-radius: 8px 10px 8px 6px;
+  background: linear-gradient(180deg, #2ecf78 0%, #1fb769 100%);
+  box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.08);
+  transition: transform 0.05s linear;
+}
+
+.dino-running {
+  animation: dino-bob 0.18s infinite alternate ease-in-out;
+}
+
+.dino-running .dino-leg {
+  animation-duration: 0.18s;
+  animation-iteration-count: infinite;
+}
+
+.dino-running .leg-a {
+  animation-name: leg-a;
+}
+
+.dino-running .leg-b {
+  animation-name: leg-b;
+}
+
+@keyframes dino-bob {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-1px); }
+}
+
+@keyframes leg-a {
+  0% { transform: rotate(18deg); }
+  100% { transform: rotate(-18deg); }
+}
+
+@keyframes leg-b {
+  0% { transform: rotate(-18deg); }
+  100% { transform: rotate(18deg); }
+}
+
+.dino::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  width: 14px;
+  height: 11px;
+  background: #d7ffe9;
+  border-radius: 4px 5px 4px 3px;
+  box-shadow: 11px 0 0 #d7ffe9;
+}
+
+.dino::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 4px;
+  width: 12px;
+  height: 8px;
+  background: #1d9b5b;
+  border-radius: 3px 3px 0 0;
+  transform: skewX(-12deg);
+}
+
+.dino-eye {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0f172a;
+}
+
+.dino-leg {
+  position: absolute;
+  bottom: -14px;
+  width: 7px;
+  height: 14px;
+  background: #1fb769;
+  border-radius: 0 0 6px 6px;
+  transform-origin: top center;
+}
+
+.leg-a {
+  left: 10px;
+}
+
+.leg-b {
+  right: 10px;
+}
+
+.obstacle {
+  position: absolute;
+  background: linear-gradient(180deg, #2f7d32 0%, #204c25 100%);
+  border-radius: 6px 6px 2px 2px;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.obstacle::before,
+.obstacle::after {
+  content: "";
+  position: absolute;
+}
+
+.obstacle.cactus {
+  background: linear-gradient(180deg, #26a35d 0%, #168744 100%);
+}
+
+.obstacle.cactus::before {
+  left: 8px;
+  top: 10px;
+  width: 10px;
+  height: 20px;
+  background: rgba(17, 94, 39, 0.38);
+  border-radius: 4px;
+}
+
+.obstacle.cactus::after {
+  right: 6px;
+  top: 18px;
+  width: 10px;
+  height: 10px;
+  background: rgba(17, 94, 39, 0.38);
+  border-radius: 4px;
+}
+
+.obstacle.bird {
+  background: linear-gradient(180deg, #0f172a 0%, #1d2b42 100%);
+  border-radius: 12px 12px 0 0;
+}
+
+.obstacle.bird::before {
+  left: 0;
+  top: 8px;
+  width: 16px;
+  height: 10px;
+  background: #0f172a;
+  clip-path: polygon(0 100%, 100% 50%, 100% 100%);
+}
+
+.obstacle.bird::after {
+  right: 0;
+  top: 8px;
+  width: 16px;
+  height: 10px;
+  background: #0f172a;
+  clip-path: polygon(0 50%, 100% 100%, 0 100%);
+}
+
+.ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 18px;
+  background: repeating-linear-gradient(
+    90deg,
+    #7d8d6d 0,
+    #7d8d6d 18px,
+    #6b7a62 18px,
+    #6b7a62 36px
+  );
+  border-top: 3px solid rgba(58, 69, 51, 0.7);
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(7, 17, 31, 0.18);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 640px) {
+  .game-screen {
+    height: 280px;
+  }
+
+  .sun {
+    right: 48px;
+    top: 22px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .cloud-one {
+    left: 64px;
+  }
+
+  .cloud-two {
+    left: 300px;
+  }
+}

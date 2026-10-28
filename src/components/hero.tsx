@@ -36,11 +36,11 @@ export const Hero = () => {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="#contact"
+            href="/game"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl glass glass-hover text-slate-200 font-semibold transition-all"
           >
             <Terminal className="h-4 w-4 text-cyan-400" />
-            <span>Get in Touch</span>
+            <span>Play Dino Game</span>
           </a>
         </div>
 
