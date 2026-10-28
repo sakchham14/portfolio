@@ -70,7 +70,10 @@ export default function DinoGamePage() {
     try {
       const response = await fetch("/api/highscore", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-game-key": process.env.NEXT_PUBLIC_GAME_KEY ?? "",
+        },
         body: JSON.stringify({ score }),
       });
 

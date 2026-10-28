@@ -4,6 +4,10 @@ import { NextResponse } from "next/server";
 
 const HIGH_SCORE_PATH = path.join(process.cwd(), "data", "highscore.json");
 
+// Shared secret that gates high-score writes. Must match the NEXT_PUBLIC_GAME_KEY
+// sent by the game client. Without it, any visitor can POST an arbitrary score.
+const GAME_KEY = process.env.NEXT_PUBLIC_GAME_KEY;
+
 async function readHighScore(): Promise<number> {
   try {
     const raw = await fs.readFile(HIGH_SCORE_PATH, "utf8");
@@ -20,6 +24,11 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  // Only the game client (which holds NEXT_PUBLIC_GAME_KEY) may write a score.
+  if (!GAME_KEY || request.headers.get("x-game-key") !== GAME_KEY) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   try {
     const body = (await request.json()) as { score?: number };
     const incomingScore = Number(body?.score ?? 0);
