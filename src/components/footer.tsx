@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="bg-gradient-to-br from-white/[0.07] via-white/[0.02] to-white/[0.04] p-12 rounded-3xl border border-white/15 text-center relative overflow-hidden mb-16">
           
           <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 relative z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            Let's Build Something Amazing Together
+            Let&apos;s Build Something Amazing Together
           </h3>
           <p className="max-w-xl mx-auto text-slate-300 text-base mb-8 relative z-10">
             Whether you have an infrastructure challenge, a full-stack project, or want to talk about networking and DevOps—my inbox is always open.

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import "./game.css";
 
 type ObstacleType = "cactus" | "bird";
@@ -67,6 +68,7 @@ export default function DinoGamePage() {
   const savedRef = useRef(false);
 
   const syncHighScore = async (score: number) => {
+    setIsSaving(true);
     try {
       const response = await fetch("/api/highscore", {
         method: "POST",
@@ -222,7 +224,7 @@ export default function DinoGamePage() {
   }, [game.running]);
 
   useEffect(() => {
-    if (!game.over || savedRef.current || isSaving) {
+    if (!game.over || savedRef.current) {
       return;
     }
 
@@ -233,9 +235,8 @@ export default function DinoGamePage() {
     }
 
     savedRef.current = true;
-    setIsSaving(true);
-    void syncHighScore(game.score);
-  }, [game.over, game.score, game.highScore, isSaving]);
+    queueMicrotask(() => void syncHighScore(game.score));
+  }, [game.over, game.score, game.highScore]);
 
   const startGame = () => {
     savedRef.current = false;
@@ -288,12 +289,12 @@ export default function DinoGamePage() {
             <p className="text-sm uppercase tracking-[0.32em] text-cyan-300">Chrome Dino</p>
             <h1 className="mt-2 text-3xl font-black sm:text-4xl">Offline Runner</h1>
           </div>
-          <a
+          <Link
             href="/"
             className="inline-flex items-center rounded-full border border-cyan-400/40 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-200 transition hover:bg-cyan-500/20"
           >
             ← Back to portfolio
-          </a>
+          </Link>
         </div>
 
         <div className="game-panel">
