@@ -53,6 +53,50 @@ body {
 .bg-app { background-color: var(--bg-app); }
 .bg-app-deep { background-color: var(--bg-app-deep); }
 
+/* Theme-aware text overrides so hardcoded Tailwind text classes stay legible in light mode */
+[data-theme="light"] .text-white,
+[data-theme="light"] .text-slate-50,
+[data-theme="light"] .text-slate-900,
+[data-theme="light"] .text-slate-950,
+[data-theme="light"] .text-slate-100 {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .text-slate-200,
+[data-theme="light"] .text-slate-300 {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .text-slate-400,
+[data-theme="light"] .text-slate-500,
+[data-theme="light"] .text-slate-600,
+[data-theme="light"] .text-slate-700 {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .text-slate-800 {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .bg-slate-950,
+[data-theme="light"] .bg-slate-900 {
+  background-color: var(--bg-app);
+}
+
+[data-theme="light"] .border-white\/10,
+[data-theme="light"] .border-white\/5 {
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="light"] .border-white\/15 {
+  border-color: rgba(15, 23, 42, 0.16);
+}
+
+/* Reduce heavy dark drop-shadows in light mode so text stays crisp */
+[data-theme="light"] [class*="drop-shadow"] {
+  filter: none;
+}
+
 [data-theme="light"] body {
   background:
     radial-gradient(1200px 600px at 80% -10%, rgba(129, 140, 248, 0.25), transparent 60%),

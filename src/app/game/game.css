@@ -24,6 +24,10 @@
   touch-action: manipulation;
 }
 
+[data-theme="light"] .game-screen {
+  background: linear-gradient(180deg, #b7e7ff 0%, #dff7ff 42%, #f4fafc 100%);
+}
+
 .sun {
   position: absolute;
   top: 30px;
@@ -235,21 +239,47 @@
 
 @media (max-width: 640px) {
   .game-screen {
-    height: 280px;
+    height: 260px;
+    min-height: 240px;
   }
 
   .sun {
-    right: 48px;
-    top: 22px;
-    width: 54px;
-    height: 54px;
+    right: 40px;
+    top: 18px;
+    width: 46px;
+    height: 46px;
   }
 
   .cloud-one {
-    left: 64px;
+    left: 56px;
   }
 
   .cloud-two {
-    left: 300px;
+    left: 260px;
+  }
+}
+
+@media (max-width: 380px) {
+  .game-screen {
+    height: 220px;
+    min-height: 200px;
+  }
+
+  .dino {
+    left: 40px;
+    width: 34px;
+    height: 36px;
+  }
+
+  .dino-eye {
+    top: 8px;
+    right: 6px;
+  }
+
+  .sun {
+    right: 34px;
+    top: 14px;
+    width: 38px;
+    height: 38px;
   }
 }
