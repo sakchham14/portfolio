@@ -1,5 +1,6 @@
 import React from "react"
 import { Package, Users, Terminal, Mail, Globe, Code2 } from "lucide-react"
+import { ThemeToggle } from "./ThemeToggle"
 
 export interface NavItem {
   label: string
@@ -34,7 +35,8 @@ export const FloatingNav = () => {
             </a>
           ))}
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             href="https://github.com/sakchham14"
             target="_blank"

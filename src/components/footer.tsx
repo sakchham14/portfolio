@@ -4,7 +4,7 @@ import { Mail, Terminal, ArrowUpRight } from "lucide-react"
 
 export const Footer = () => {
   return (
-    <footer id="contact" className="py-24 px-6 border-t border-white/10 relative bg-[#030712]">
+    <footer id="contact" className="py-24 px-6 border-t border-white/10 relative bg-app-deep">
       <div className="max-w-5xl mx-auto">
         <div className="bg-gradient-to-br from-white/[0.07] via-white/[0.02] to-white/[0.04] p-12 rounded-3xl border border-white/15 text-center relative overflow-hidden mb-16">
           

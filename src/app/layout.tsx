@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased dark" suppressHydrationWarning>
       <body className="min-h-full w-full flex flex-col bg-[#070b18] font-sans text-slate-100">
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         {gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>

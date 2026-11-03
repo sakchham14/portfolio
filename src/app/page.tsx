@@ -7,7 +7,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#070b18] text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-white">
+    <main className="min-h-screen bg-app text-slate-100 flex flex-col font-sans selection:bg-cyan-500 selection:text-white">
       <FloatingNav />
       <Hero />
       <Skills />
