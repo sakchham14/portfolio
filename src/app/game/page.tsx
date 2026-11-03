@@ -36,9 +36,9 @@ const DINO_HEIGHT = 44;
 const GROUND_OFFSET = 18;
 const GRAVITY = 0.7;
 const JUMP_POWER = 12.4;
-const INITIAL_SPEED = 4.8;
-const MAX_SPEED = 13.5;
-const BASE_SPAWN_DELAY = 1400;
+const INITIAL_SPEED = 3.6;
+const MAX_SPEED = 9;
+const BASE_SPAWN_DELAY = 1600;
 
 const createInitialState = (highScore = 0): GameState => ({
   started: false,
@@ -123,7 +123,7 @@ export default function DinoGamePage() {
     let lastFrame = performance.now();
 
     const tick = (time: number) => {
-      const delta = Math.min((time - lastFrame) / 16.67, 2.5);
+      const delta = Math.min((time - lastFrame) / 16.67, 1.5);
       lastFrame = time;
 
       setGame((prev) => {
@@ -139,8 +139,8 @@ export default function DinoGamePage() {
           nextVelocity = 0;
         }
 
-        const nextScore = Math.max(0, prev.score + delta * 0.6);
-        const nextSpeed = Math.min(prev.speed + 0.02 * delta, MAX_SPEED);
+        const nextScore = Math.max(0, prev.score + delta * 0.4);
+        const nextSpeed = Math.min(prev.speed + 0.012 * delta, MAX_SPEED);
         let nextSpawnTimer = prev.spawnTimer + delta * 16.67;
 
         let obstacles = prev.obstacles
